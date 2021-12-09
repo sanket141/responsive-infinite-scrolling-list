@@ -1,0 +1,69 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^9.4.0",
+    "cra-template": "1.1.2",
+    "jest": "26.6.0",
+    "jest-canvas-mock": "^2.1.1",
+    "jest-junit": "^6.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "styled-components": "^5.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest ./src/js",
+    "eject": "react-scripts eject"
+  },
+  "jest": {
+    "setupFiles": [
+      "jest-canvas-mock",
+      "./jest/throwOnConsoleError.js",
+      "./jest/windowMock.js"
+    ],
+    "setupFilesAfterEnv": [
+      "./jest/reactTestingLibrary.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/jest/fileMock.js",
+      "imports-loader?.*": "<rootDir>/jest/es5modules.js",
+      "worker-loader?.*": "<rootDir>/es5modules.js"
+    },
+    "globals": {},
+    "reporters": [
+      "default",
+      [
+        "jest-junit",
+        {
+          "output": "reports/junit.xml"
+        }
+      ]
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

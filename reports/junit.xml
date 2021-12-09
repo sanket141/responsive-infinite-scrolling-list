@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="5" failures="0" time="3.858">
+  <testsuite name="ScrollingListApp component" errors="0" failures="0" skipped="0" timestamp="2021-12-09T21:16:53" time="3.095" tests="5">
+    <testcase classname="ScrollingListApp component should render login page intially" name="ScrollingListApp component should render login page intially" time="0.09">
+    </testcase>
+    <testcase classname="ScrollingListApp component login button should be disabled initially" name="ScrollingListApp component login button should be disabled initially" time="0.031">
+    </testcase>
+    <testcase classname="ScrollingListApp component on entering username and password, login button should get enabled" name="ScrollingListApp component on entering username and password, login button should get enabled" time="0.029">
+    </testcase>
+    <testcase classname="ScrollingListApp component on login button click, should render home screen" name="ScrollingListApp component on login button click, should render home screen" time="0.091">
+    </testcase>
+    <testcase classname="ScrollingListApp component on logout button click, should render login screen" name="ScrollingListApp component on logout button click, should render login screen" time="0.064">
+    </testcase>
+  </testsuite>
+</testsuites>
